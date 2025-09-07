@@ -3,11 +3,12 @@ package com.ameer.inheritance.employee;
 import java.text.DecimalFormat;
 
 public class CommissionEmployee extends Employee {
+    private static final DecimalFormat PERCENT_DECIMAL_FORMAT = new DecimalFormat("##.##%");
     private double grossSales; // gross weekly sales
     private double commissionRate; // commission percentage (e.g., 0.06 for 6%)
-    private static final DecimalFormat PERCENT_DECIMAL_FORMAT = new DecimalFormat("##.##%");
 
-    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate) {
+    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales,
+                              double commissionRate) {
         super(firstName, lastName, socialSecurityNumber);
         this.grossSales = grossSales;
         this.commissionRate = commissionRate;

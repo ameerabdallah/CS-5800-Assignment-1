@@ -1,14 +1,13 @@
 package com.ameer.inheritance.employee;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
 
 public abstract class Employee {
+    protected static final NumberFormat MONEY_FORMAT = NumberFormat.getCurrencyInstance(Locale.US);
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
-    protected static final NumberFormat MONEY_FORMAT = NumberFormat.getCurrencyInstance(Locale.US);
 
     public Employee(String firstName, String lastName, String socialSecurityNumber) {
         this.firstName = firstName;
@@ -20,20 +19,20 @@ public abstract class Employee {
         return firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getSocialSecurityNumber() {
-        return socialSecurityNumber;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
     }
 
     public void setSocialSecurityNumber(String socialSecurityNumber) {
