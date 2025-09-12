@@ -24,6 +24,7 @@ public class VendorInvoice implements Payable {
         return this.vendorName;
     }
 
+    @Override
     public void print() {
         System.out.printf(
                 "Vendor Name: %s\nInvoice Number: %s\nCalculated Payment: %s\n",

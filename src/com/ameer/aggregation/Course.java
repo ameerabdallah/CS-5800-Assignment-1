@@ -3,9 +3,9 @@ package com.ameer.aggregation;
 import java.util.List;
 
 public class Course {
-    private String courseName;
-    private List<Instructor> instructors;
-    private List<Textbook> textbooks;
+    private final String courseName;
+    private final List<Instructor> instructors;
+    private final List<Textbook> textbooks;
 
     public Course(String courseName, List<Instructor> instructors, List<Textbook> textBooks) {
         this.courseName = courseName;

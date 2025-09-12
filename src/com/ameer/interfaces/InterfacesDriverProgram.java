@@ -21,14 +21,7 @@ public class InterfacesDriverProgram {
         double totalPayments = 0.0;
         for (Payable payable : payables) {
             totalPayments += payable.calculatePayment();
-
-            // Sort of feels like we should just add a print method to the interface, but that wasn't part of the
-            // instructions, so leaving it out
-            if (payable instanceof Freelancer) {
-                ((Freelancer) payable).print();
-            } else if (payable instanceof VendorInvoice) {
-                ((VendorInvoice) payable).print();
-            }
+            payable.print();
             System.out.println("===================================");
         }
 

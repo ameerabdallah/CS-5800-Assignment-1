@@ -26,6 +26,7 @@ public class Freelancer implements Payable {
         return firstName + " " + lastName;
     }
 
+    @Override
     public void print() {
         System.out.printf(
                 "Full Name: %s\nCalculated Payment: %s\n",
